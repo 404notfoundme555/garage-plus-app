@@ -1,26 +1,54 @@
-@import "tailwindcss";
 
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/syne@5.0.8/index.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/dm-sans@5.0.14/index.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg: #F7F4F0;
+  --surf: #FFFFFF;
+  --s2: #EEE9E3;
+  --t1: #1C1B19;
+  --t2: #6E6C67;
+  --t3: #B4B0A8;
+  --acc: #E8863A;
+  --adim: rgba(232, 134, 58, .1);
+  --brd: rgba(0, 0, 0, .05); /* เงาจางๆ แบบในภาพ */
+  --brd2: rgba(0, 0, 0, .08);
+  --err: #E85C3A;
+  --grn: #2D9E65;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--t1);
+}
+
+.syne { font-family: 'Syne', sans-serif; }
+
+/* สร้างคลาสสำหรับ Card ที่เหมือนแอปที่สุด */
+.glass-card {
+  background: var(--surf);
+  border-radius: 40px; /* มนพิเศษตามภาพ */
+  border: 1px solid var(--brd);
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.03);
+}
+
+.input-style {
+  background: var(--bg);
+  border: 1px solid var(--brd2);
+  border-radius: 20px;
+  height: 60px;
+  width: 100%;
+  padding: 0 20px;
+  transition: all 0.2s ease;
+}
+
+.input-style:focus {
+  border-color: var(--acc);
+  outline: none;
+  background: var(--surf);
+  box-shadow: 0 0 0 4px var(--adim);
 }
