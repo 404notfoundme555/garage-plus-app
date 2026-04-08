@@ -1,13 +1,16 @@
 import Header from '@/components/Header'
-import CarCard from '@/components/CarCard'
-import MenuGrid from '@/components/MenuGrid'
-
-export default function HomePage(){
-  return(
-    <div>
+import ArticleSection from '@/components/ArticleSection'
+import HistorySection from '@/components/HistorySection'
+export default function HomePage() {
+  return (
+    <div className='sc'>
       <Header/>
-      <CarCard/>
-      <MenuGrid/>
+        <div className="car-switch">
+          <div className="csw on"></div>
+          <div className="csw"></div>
+        </div>
+      <ArticleSection/>
+      <HistorySection/>
     </div>
   )
 }

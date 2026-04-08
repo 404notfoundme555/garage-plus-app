@@ -6,23 +6,22 @@ export default function MenuGrid() {
 
   return (
     <div className="qgrd">
-
-      <div className="qc" onClick={() => router.push('/booking')}>
-        📅 จองคิว
-      </div>
-
-      <div className="qc" onClick={() => router.push('/status')}>
-        🔧 สถานะ
-      </div>
-
-      <div className="qc" onClick={() => router.push('/history')}>
-        📋 ประวัติ
-      </div>
-
-      <div className="qc">
-        🎁 โปร
-      </div>
-
-    </div>
+            <div className="qc" onClick={()=>router.push('/booking')}>
+                <div className="qic">📅</div>
+                <div className="qn">จองคิว</div>
+            </div>
+            <div className="qc" onClick={()=>router.push('/status')}>
+                <div className="qic">🔧</div>
+                <div className="qn">สถานะ</div>
+            </div>
+            <div className="qc" onClick={()=>router.push('/history')}>
+                <div className="qic">📋</div>
+                <div className="qn">ประวัติ</div>
+            </div>
+            <div className="qc">
+                <div className="qic">🎁</div>
+                <div className="qn">โปรโมชั่น</div>
+            </div>
+          </div> 
   )
 }
