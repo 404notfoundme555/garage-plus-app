@@ -17,40 +17,74 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="auth">
+    <div id="sc-login">
+      <div className="auth">
 
-      <div className="alogo">
-        <div className="alogo-ic">⚙️</div>
-        <div className="alogo-t">Garage<em>Plus</em></div>
-      </div>
+        <div className="alogo">
+          <div className="alogo-ic">⚙️</div>
+          <div className="alogo-t">Garage<em>Plus</em></div>
+        </div>
 
-      <div className="ah">ยินดีต้อนรับ 👋</div>
-      <div className="as">เข้าสู่ระบบเพื่อจัดการรถของคุณ</div>
+        <div className="ah">ยินดีต้อนรับ 👋</div>
+        <div className="as">เข้าสู่ระบบเพื่อจัดการรถของคุณ</div>
 
-      <input
-        className="fi"
-        placeholder="your@email.com"
-        value={email}
-        onChange={(e)=>setEmail(e.target.value)}
-      />
+        {/* EMAIL */}
+        <div className="fld">
+          <div className="fl">
+            อีเมล<span className="req">*</span>
+          </div>
 
-      <input
-        className="fi"
-        type="password"
-        placeholder="••••••••"
-        value={password}
-        onChange={(e)=>setPassword(e.target.value)}
-      />
+          <input
+            className="fi"
+            placeholder="your@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
 
-      <button className="btnp" onClick={login}>
-        เข้าสู่ระบบ
-      </button>
+        {/* PASSWORD */}
+        <div className="fld">
+          <div className="fl">
+            รหัสผ่าน<span className="req">*</span>
+          </div>
 
-      <div className="aft">
-        ยังไม่มีบัญชี? 
-        <span onClick={()=>router.push('/signup')} style={{color:'#E8863A',cursor:'pointer'}}>
-          สมัครสมาชิก
-        </span>
+          <div className="pw-wrap">
+            <input
+              className="fi"
+              type="password"
+              placeholder="••••••••"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <span className="pw-eye">👁</span>
+          </div>
+        </div>
+
+        <div className="forgot">ลืมรหัสผ่าน?</div>
+
+        <button className="btnp" onClick={login}>
+          เข้าสู่ระบบ
+        </button>
+
+        <div className="divdr">
+          <div className="dvl"></div>
+          <div className="dvt">หรือเข้าสู่ระบบด้วย</div>
+          <div className="dvl"></div>
+        </div>
+
+        <div className="socs">
+          <div className="soc" style={{ color: '#00B900' }}>🟢 LINE</div>
+          <div className="soc">🔵 Google</div>
+          <div className="soc">📞 เบอร์โทร</div>
+        </div>
+
+        <div className="aft">
+          ยังไม่มีบัญชี?{' '}
+          <a onClick={() => router.push('/signup')}>
+            สมัครสมาชิก
+          </a>
+        </div>
+
       </div>
 
     </div>
