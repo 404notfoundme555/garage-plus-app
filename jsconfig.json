@@ -1,7 +1,13 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "paths": {
       "@/*": ["./src/*"]
+=======
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+>>>>>>> 79f2801 (full future)
     }
   }
 }
